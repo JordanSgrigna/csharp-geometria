@@ -27,3 +27,29 @@ Console.WriteLine(perimetroRettangolo);
 
 int areaRettangolo = rettangoloUno.calcolaArea();
 Console.WriteLine(areaRettangolo);
+
+string stampaRettangolo = rettangoloUno.stampaRettangolo();
+Console.WriteLine(stampaRettangolo);
+
+
+for (int i = 0; i < altezzaRettangolo; i++)
+{
+	for (int j = 0; j < baseRettangolo; j++)
+	{
+		if(i == 0 || i < (altezzaRettangolo - 1))
+		{
+			Console.Write("--");
+		} 
+		else if(j == 0 || j < (baseRettangolo - 1))
+		{
+			Console.Write("|");
+		}
+
+
+		
+
+	}
+
+}
+
+

@@ -38,14 +38,17 @@ namespace Geometria
 
 		}
 
-		public void stampaRettangolo()
+		public string stampaRettangolo()
 		{
-			Console.WriteLine("-----Rettangolo-----");
-			Console.WriteLine($"Base: {baseRettangolo}");
-			Console.WriteLine($"Altezza: {altezzaRettangolo}");
-			Console.WriteLine("Perimetro: " + calcolaPerimetro());
-			Console.WriteLine("Area: " + calcolaArea());
-			Console.WriteLine("-------------------------");
+			string informazioniRettangolo =
+				$"---------RETTANGOLO---------- \n" +
+				$"Base: {baseRettangolo} \n" +
+				$"Altezza: {altezzaRettangolo} \n" +
+				$"Perimetro: {calcolaPerimetro()} \n" +
+				$"Area: {calcolaArea()} \n" +
+				$"------------------------------";
+
+			return informazioniRettangolo;
 		}
 	}
 }
