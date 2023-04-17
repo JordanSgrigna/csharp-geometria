@@ -1,12 +1,17 @@
 ﻿using Geometria;
 
+int baseRettangolo;
+int altezzaRettangolo;
+
+
+
 Console.Write("Scrivi l'altezza del rettangolo: ");
-int baseRettangolo = int.Parse(Console.ReadLine());
+baseRettangolo = int.Parse(Console.ReadLine());
 
 Console.Write("Scrivi la lunghezza del rettangolo: ");
-int altezzaRettangolo = int.Parse((Console.ReadLine()));
+altezzaRettangolo = int.Parse((Console.ReadLine()));
 
-while((baseRettangolo == altezzaRettangolo) || ((baseRettangolo == 0) || (altezzaRettangolo == 0)))
+while ((baseRettangolo == altezzaRettangolo) || ((baseRettangolo <= 0) || (altezzaRettangolo <= 0)))
 {
 	Console.Write("Riscrivi l'altezza del rettangolo diversa dalla lunghezza o da 0: ");
 	baseRettangolo = int.Parse(Console.ReadLine());
@@ -16,3 +21,9 @@ while((baseRettangolo == altezzaRettangolo) || ((baseRettangolo == 0) || (altezz
 }
 
 Rettangolo rettangoloUno = new Rettangolo(baseRettangolo, altezzaRettangolo);
+
+int perimetroRettangolo = rettangoloUno.calcolaPerimetro();
+Console.WriteLine(perimetroRettangolo);
+
+int areaRettangolo = rettangoloUno.calcolaArea();
+Console.WriteLine(areaRettangolo);

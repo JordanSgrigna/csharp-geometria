@@ -22,20 +22,30 @@ namespace Geometria
 		}
 
 		// METODI
-		public int calcolaPerimetro(int baseRettangolo, int altezzaRettangolo)
+		public int calcolaPerimetro()
 		{
-			int perimetro = (this.baseRettangolo * 2) + (this.altezzaRettangolo * 2);
+			int perimetro = (baseRettangolo * 2) + (altezzaRettangolo * 2);
 			return perimetro;
 
 		}
 
 
-		public int calcolaArea(int baseRettangolo, int altezzaRettangolo)
+		public int calcolaArea()
 		{
 
-			int area = this.baseRettangolo * this.altezzaRettangolo;
+			int area = baseRettangolo * altezzaRettangolo;
 			return area;
 
+		}
+
+		public void stampaRettangolo()
+		{
+			Console.WriteLine("-----Rettangolo-----");
+			Console.WriteLine($"Base: {baseRettangolo}");
+			Console.WriteLine($"Altezza: {altezzaRettangolo}");
+			Console.WriteLine("Perimetro: " + calcolaPerimetro());
+			Console.WriteLine("Area: " + calcolaArea());
+			Console.WriteLine("-------------------------");
 		}
 	}
 }
