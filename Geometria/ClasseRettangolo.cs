@@ -38,7 +38,7 @@ namespace Geometria
 
 		}
 
-		public string stampaRettangolo()
+		public string stampaInformazioniRettangolo()
 		{
 			string informazioniRettangolo =
 				$"---------RETTANGOLO---------- \n" +
@@ -49,6 +49,38 @@ namespace Geometria
 				$"------------------------------";
 
 			return informazioniRettangolo;
+		}
+
+		public void stampaRettangoloInConsole()
+		{
+			for (int i = 0; i < altezzaRettangolo; i++)
+			{
+				for (int j = 0; j < baseRettangolo; j++)
+				{
+					//Prima ed ultima riga
+					if (i == 0 || i == (altezzaRettangolo - 1))
+					{
+						Console.Write("--");
+					}
+					//Prima ed ultima colonna
+					else if (j == 0 || j == (baseRettangolo - 1))
+					{
+						Console.Write("|");
+					}
+					else
+					{
+						Console.Write("  ");
+					}
+
+					if (j == (baseRettangolo - 1))
+					{
+						Console.WriteLine("");
+					}
+
+
+				}
+
+			}
 		}
 	}
 }

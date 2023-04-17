@@ -32,20 +32,30 @@ string stampaRettangolo = rettangoloUno.stampaRettangolo();
 Console.WriteLine(stampaRettangolo);
 
 
+
 for (int i = 0; i < altezzaRettangolo; i++)
 {
 	for (int j = 0; j < baseRettangolo; j++)
-	{
-		if(i == 0 || i < (altezzaRettangolo - 1))
+	{	
+		//Prima ed ultima riga
+		if(i == 0 || i == (altezzaRettangolo - 1))
 		{
 			Console.Write("--");
-		} 
-		else if(j == 0 || j < (baseRettangolo - 1))
+		}
+		//Prima ed ultima colonna
+		else if(j == 0 || j == (baseRettangolo - 1))
 		{
 			Console.Write("|");
 		}
+		else
+		{
+			Console.Write("  ");
+		}
 
-
+		if(j == (baseRettangolo - 1))
+		{
+			Console.WriteLine("");
+		}
 		
 
 	}
